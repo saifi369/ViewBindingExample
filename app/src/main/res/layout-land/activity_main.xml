@@ -17,26 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Ready to Learn!" />
 
-    <TextView
-        android:id="@+id/tv_output2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_output1"
-        tools:text="View Binding" />
-
-    <include
-        android:id="@+id/included_layout"
-        layout="@layout/second_layout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_output2"/>
-
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="0dp"

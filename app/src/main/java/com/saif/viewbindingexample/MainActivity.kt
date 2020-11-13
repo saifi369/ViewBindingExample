@@ -18,11 +18,18 @@ class MainActivity : AppCompatActivity() {
 
         with(binding){
             tvOutput1.text = "Hello World!"
-            tvOutput2.text = "Welcome to View Binding"
+            tvOutput2?.text = "Welcome to View Binding"
+            includedLayout?.tvIncludeOutput1?.text = "View Binding in Included layout..."
 
             btnClickMe.setOnClickListener {
-                Toast.makeText(this@MainActivity, "Hello World", Toast.LENGTH_SHORT).show()
+                val fragment = MainFragment()
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .add(R.id.fragment_container,fragment)
+                        .commit()
             }
         }
+
     }
 }
